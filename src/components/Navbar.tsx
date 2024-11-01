@@ -114,7 +114,7 @@ export default function Component() {
           </p>
           <Link
             href="/discover"
-            className="rounded-md bg-[#D4AF37] px-8 py-3 font-medium text-white transition-colors hover:bg-[#B4941F]"
+            className="rounded-md bg-[#04002a] px-8 py-3 font-medium text-white transition-colors hover:bg-[#B4941F]"
           >
             Discover more
           </Link>
