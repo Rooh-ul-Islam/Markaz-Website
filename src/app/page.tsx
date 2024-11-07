@@ -137,7 +137,7 @@ export default function Component() {
       </main>
        <LeadershipSection />
        <AboutSection />
-      <Footer />
+      
     </div>
   )
 }

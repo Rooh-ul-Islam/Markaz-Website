@@ -6,7 +6,7 @@ export default function AboutSection() {
             {/* Image Section */}
             <div className="w-full md:w-1/2 relative">
               <img
-                src="/path/to/institution-image.jpg" // Replace with the actual path to the institution image
+                src="bott.jpeg" // Replace with the actual path to the institution image
                 alt="Maryam Institute"
                 className="w-full h-auto rounded-lg shadow-2xl transform transition duration-500 hover:scale-105"
               />

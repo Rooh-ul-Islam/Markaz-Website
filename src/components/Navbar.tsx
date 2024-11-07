@@ -76,10 +76,10 @@ export default function Component() {
                   Admissions
                 </Link>
                 <Link
-                  href="/subscribe"
+                  href="/contact"
                   className="text-sm font-medium text-black hover:text-[#D4AF37]"
                 >
-                  Subscribe
+                  Contact Us
                 </Link>
                 <Link
                   href="/donate"

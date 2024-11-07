@@ -8,14 +8,14 @@ export default function LeadershipSection() {
             {/* Patron in Chief */}
             <div className="flex flex-col items-center bg-[#04002a] text-white p-8 shadow-lg rounded-lg w-full md:w-1/3 hover:shadow-2xl transition-shadow duration-300">
               <img
-                src="/path/to/patron-image.jpg" // Replace with the actual path to Patron in Chief's image
+                src="Patron-inChief.jpeg" // Replace with the actual path to Patron in Chief's image
                 alt="Patron in Chief"
-                className="w-32 h-32 rounded-full mb-6 border-4 border-white"
+                className="w-52 h-52 rounded-full mb-6 border-4 border-white"
               />
               <h3 className="text-2xl font-semibold">Patron in Chief</h3>
-              <p className="text-lg font-medium mt-2 mb-4">Dr. [Name]</p> {/* Replace with actual name */}
+              <p className="text-lg font-medium mt-2 mb-4">Sajjan Sain</p> {/* Replace with actual name */}
               <p className="text-sm text-gray-300">
-                Dr. [Name] is the Patron in Chief of Maryam Institute, guiding its vision and mission to provide classical Islamic education.
+                Sajjan Sain is the Patron in Chief of Markaz Rooh-ul-Islam, guiding its vision and mission to provide Islamic Sufism education.
               </p>
             </div>
   
