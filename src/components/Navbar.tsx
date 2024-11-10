@@ -70,10 +70,10 @@ export default function Navbar() {
                </div>
               </Link>
               <Link
-                href="/admissions"
+                href="/about"
                 className="text-sm font-medium text-black hover:text-[#02101a]"
               >
-                Admissions
+                About
               </Link>
               <Link
                 href="/gallery"

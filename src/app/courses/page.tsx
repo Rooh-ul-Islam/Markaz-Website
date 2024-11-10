@@ -6,19 +6,28 @@ import Link from 'next/link'
 import { motion, useAnimation } from 'framer-motion'
 import { Calendar, Clock, Users, Book, Award, MessageCircle } from 'lucide-react'
 
+
+type Course = {
+  name: string;
+  image: string;
+  description: string;
+  duration: string;
+  schedule: string;
+  curriculum: string[];
+};
 export default function CoursesPage() {
-  const [selectedCourse, setSelectedCourse] = useState(null)
-  const controls = useAnimation()
+  const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
+  const controls = useAnimation();
 
   useEffect(() => {
     controls.start(i => ({
       opacity: 1,
       y: 0,
       transition: { delay: i * 0.1 }
-    }))
-  }, [controls])
+    }));
+  }, [controls]);
 
-  const courses = [
+  const courses: Course[] = [
     {
       name: 'Computer',
       image: '/com.jpeg',

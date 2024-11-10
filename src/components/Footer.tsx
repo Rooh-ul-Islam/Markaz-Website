@@ -10,12 +10,8 @@ export default function Footer() {
         <div className="flex flex-col items-center lg:items-start lg:w-1/3 space-y-4">
           <h2 className="text-lg font-semibold uppercase">About Us</h2>
           <p className="text-center lg:text-left text-sm">
-            Maryam Institute is a non-commercial, non-political educational
-            institute for women dedicated to classical Islamic learning and
-            spirituality. Its core objectives are to provide a structured
-            educational approach to classical Islamic scholarship, offer a
-            flexible learning environment and impart an educational experience
-            that is at once intellectually rigorous and spiritually uplifting.
+          Ruhol-ul-Islam Jamia is serving the religion of Islam and the nation with its own help and limited resources. Due to high expenses and low income, the institution is in debt every year in terms of ration and salaries. The institution is facing many difficulties, especially hostel and ration expenses for students.
+          The institution is dependent on monthly donations, which is facing a lot of difficulties in meeting the needs. 
           </p>
           <div className="flex space-x-3">
             <Link href="/" className="text-[#333333] hover:text-[#04002a] transition">

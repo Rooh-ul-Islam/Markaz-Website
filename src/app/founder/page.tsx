@@ -13,13 +13,15 @@ export default function FounderPage() {
     title: "Founder",
     image: "/Patron-inChief.jpeg",
     bio: "Sajjan Saeen, real name (Khawaja) Muhammad Tahir Bakhshi Naqshbandi. He was born on March 21st 1963, in District Larkana, Pakistan. He belongs to the Mujaddidi branch of the Naqshbandi Sufi order. His spiritual lineage goes back to the Holy Prophet Muhammad (PBUH) through Sheikh Ahmad Sirhindi, the Mujjadid of the eleventh Hijri century.",
-    achievements: [
-      "Ph.D. in Islamic Studies from Al-Azhar University",
-      "Author of 15 books on Islamic jurisprudence and ethics",
-      "Recipient of the International Islamic Education Award",
-      "Established 5 Islamic schools across the country"
+    agendas: [
+      "Health",
+      "Education",
+      "Business",
+      "Social Welfare",
+      "Environment Tolerance",
+      "Use of scientific education and inventions"
     ],
-    quote: "Education is the cornerstone of a thriving Ummah. Our duty is to nurture minds that are rooted in Islamic values and equipped to face the challenges of the modern world."
+    quote: "The Six core agendas reflects the love of Hazoor Sajjan Sain for all humanity. He is directing and preparing us for the future, which indeed is a blessing for all of us."
   }
 
   return (
@@ -59,10 +61,10 @@ export default function FounderPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-300 text-lg mb-6">{founderInfo.bio}</p>
-                <h3 className="text-2xl font-semibold mb-4 text-white">Key Achievements</h3>
+                <h3 className="text-2xl font-semibold mb-4 text-white">6 Core Agendas</h3>
                 <ul className="list-disc list-inside space-y-2 text-gray-300">
-                  {founderInfo.achievements.map((achievement, index) => (
-                    <li key={index}>{achievement}</li>
+                  {founderInfo.agendas.map((agendas, index) => (
+                    <li key={index}>{agendas}</li>
                   ))}
                 </ul>
               </CardContent>
@@ -94,13 +96,13 @@ export default function FounderPage() {
         >
           <h2 className="text-4xl font-bold mb-6 text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.7)]">Our Vision</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Under Dr. Al-Rashid's leadership, our institution strives to create a learning environment that fosters academic excellence, spiritual growth, and community engagement.
+            The message and teachings of Sajjan Sain are straightforward to understand. He says that one should consider their actions and exert effort in bettering oneself. One should not object not to speak ill of any other being, religion or sect. 
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {[
-              { icon: BookOpen, title: "Academic Excellence", description: "Rigorous curriculum blending Islamic and modern sciences" },
-              { icon: Users, title: "Community Engagement", description: "Programs that connect students with the broader Muslim community" },
-              { icon: Award, title: "Character Development", description: "Focus on nurturing ethical leaders for tomorrow" }
+              { icon: BookOpen, title: "Education", description: "Education is an essential component of an Islamic society." },
+              { icon: Users, title: "Social Welfare", description: "ocial welfare is concerned with welfare and well-being of the poor, vulnerable and marginalized segments of society." },
+              { icon: Award, title: "Environment Tolerance", description: "Contributing toward a welfare state by reforming ourselves and making our environment better comes up with environmental tolerance. " }
             ].map((item, index) => (
               <Card key={index} className="bg-gray-800 border-blue-500 shadow-lg">
                 <CardContent className="pt-6">
