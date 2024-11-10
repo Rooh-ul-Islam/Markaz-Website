@@ -9,7 +9,7 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, Di
 import { X } from 'lucide-react'
 
 export default function GalleryPage() {
-  const [selectedImage, setSelectedImage] = useState(null)
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const horizontalImages = [
     { src: '/grad.jpeg', alt: 'Graduation ceremony' },
@@ -43,40 +43,42 @@ export default function GalleryPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {horizontalImages.map((image, index) => (
               <motion.div
-                key={index}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Card className="bg-gray-800 border-blue-500 shadow-lg overflow-hidden">
-                  <CardContent className="p-0">
-                    <Dialog>
-                      <DialogTrigger asChild>
-                        <Button variant="ghost" className="w-full p-0 h-auto">
-                          <Image
-                            src={image.src}
-                            alt={image.alt}
-                            width={500}
-                            height={300}
-                            className="w-full h-auto object-cover transition-transform duration-300 hover:scale-110"
-                          />
-                        </Button>
-                      </DialogTrigger>
-                      <DialogContent className="max-w-4xl bg-gray-900 border-blue-500">
-                        <DialogHeader>
-                          <DialogTitle className="text-2xl font-bold text-white">{image.alt}</DialogTitle>
-                        </DialogHeader>
+              key={index}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Card className="bg-gray-800 border-blue-500 shadow-lg overflow-hidden">
+                <CardContent className="p-0">
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Button variant="ghost" className="w-full p-0 h-auto" onClick={() => setSelectedImage(image.src)}>
                         <Image
                           src={image.src}
+                          alt={image.alt}
+                          width={500}
+                          height={300}
+                          className="w-full h-auto object-cover transition-transform duration-300 hover:scale-110"
+                        />
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent className="max-w-4xl bg-gray-900 border-blue-500">
+                      <DialogHeader>
+                        <DialogTitle className="text-2xl font-bold text-white">{image.alt}</DialogTitle>
+                      </DialogHeader>
+                      {selectedImage && (
+                        <Image
+                          src={selectedImage}
                           alt={image.alt}
                           width={1000}
                           height={600}
                           className="w-full h-auto object-contain"
                         />
-                      </DialogContent>
-                    </Dialog>
-                  </CardContent>
-                </Card>
-              </motion.div>
+                      )}
+                    </DialogContent>
+                  </Dialog>
+                </CardContent>
+              </Card>
+            </motion.div>            
             ))}
           </div>
         </motion.div>

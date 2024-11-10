@@ -8,6 +8,7 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
 
+ 
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768) // Adjust threshold for mobile here

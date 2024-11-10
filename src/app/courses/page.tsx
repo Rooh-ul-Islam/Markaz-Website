@@ -173,33 +173,36 @@ export default function CoursesPage() {
           </motion.div>
         )}
 
-        <motion.div 
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.5 }}
-          className="mt-24 text-center"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.7)]">Why Choose Our Institution?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-8">
-            {[
-              { icon: Users, title: "Expert Instructors", description: "Learn from experienced scholars and professionals in their fields." },
-              { icon: Book, title: "Comprehensive Curriculum", description: "Our courses cover both traditional and modern subjects for a well-rounded education." },
-              { icon: Award, title: "Recognized Certification", description: "Gain certificates that are respected in both Islamic and professional circles." }
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                custom={index}
-                initial={{ opacity: 0, y: 50 }}
-                animate={controls}
-                className="bg-gray-800 p-8 rounded-lg shadow-lg border-2 border-blue-400"
-              >
-                <item.icon className="h-16 w-16 text-blue-400 mx-auto mb-6" />
-                <h3 className="text-2xl font-semibold mb-4 text-white">{item.title}</h3>
-                <p className="text-gray-100 text-lg leading-relaxed">{item.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+<motion.div 
+  initial={{ opacity: 0, y: 50 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.5, duration: 0.5 }}
+  className="mt-24 text-center"
+>
+  <h2 className="text-4xl md:text-5xl font-bold mb-12 text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.7)]">
+    Why Choose Our Institution?
+  </h2>
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-8">
+    {[
+      { icon: Users, title: 'Expert Instructors', description: 'Learn from experienced scholars and professionals in their fields.' },
+      { icon: Book, title: 'Comprehensive Curriculum', description: 'Our courses cover both traditional and modern subjects for a well-rounded education.' },
+      { icon: Award, title: 'Recognized Certification', description: 'Gain certificates that are respected in both Islamic and professional circles.' }
+    ].map((item, index) => (
+      <motion.div
+        key={index}
+        custom={index}
+        initial={{ opacity: 0, y: 50 }}
+        animate={controls}
+        className="bg-gray-800 p-8 rounded-lg shadow-lg border-2 border-blue-400"
+      >
+        <item.icon className="h-16 w-16 text-blue-400 mx-auto mb-6" />
+        <h3 className="text-2xl font-semibold mb-4 text-white">{item.title}</h3>
+        <p className="text-gray-100 text-lg leading-relaxed">{item.description}</p>
+      </motion.div>
+    ))}
+  </div>
+</motion.div>
+
 
         <motion.div
           initial={{ opacity: 0, y: 50 }}

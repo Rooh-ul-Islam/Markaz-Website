@@ -1,5 +1,3 @@
-import Navbar from "@/components/Navbar"
-import Footer from "@/components/Footer"
 import LeadershipSection from "@/components/Leadershippsection"
 import AboutSection from "@/components/AboutInstitution"
 import Link from "next/link"
@@ -8,7 +6,6 @@ export default function Component() {
   return (
     <div className="min-h-screen bg-[#04002a] relative">
       
-
       {/* Yellow background with Islamic pattern */}
       <div className="h-24 w-full bg-[#04002a] relative overflow-hidden">
         <div
@@ -36,8 +33,8 @@ export default function Component() {
             Online Islamic Learning
           </h1>
           <p className="mb-8 max-w-3xl text-lg md:text-xl">
-            The Messenger of Allah ﷺ said, "When Allah wishes good for someone, He
-            bestows upon him the understanding of Deen." [Bukhari]
+            The Messenger of Allah ﷺ said, &quot;When Allah wishes good for someone, He
+            bestows upon him the understanding of Deen.&quot; [Bukhari]
           </p>
           <Link
             href="/discover"
@@ -52,3 +49,4 @@ export default function Component() {
     </div>
   )
 }
+
