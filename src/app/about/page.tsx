@@ -1,6 +1,5 @@
 'use client'
 
-import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -11,7 +10,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import Link from 'next/link'
 
 export default function AdmissionsPage() {
-  const [activeTab, setActiveTab] = useState("courses");
 
   const content = {
     courses: [
@@ -54,83 +52,83 @@ export default function AdmissionsPage() {
     ]
   }
 
-  return (
-    <div className="min-h-screen bg-gradient-to-b from-[#04002a] to-[#090047] text-white py-12 px-4 sm:px-6 lg:px-8">
-      <motion.div 
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="max-w-7xl mx-auto"
-      >
-        <h1 className="text-5xl md:text-7xl font-bold text-center mt-48 mb-16 text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.7)]">About Markaz Rooh-ul-Islam</h1>
-        
-        <Tabs defaultValue="courses" className="mb-16">
-          <TabsList className="grid w-full grid-cols-2 mb-8">
-            <TabsTrigger value="courses" onClick={() => setActiveTab("courses")}>Courses</TabsTrigger>
-            <TabsTrigger value="essentialInfo" onClick={() => setActiveTab("essentialInfo")}>Essential Info</TabsTrigger>
-          </TabsList>
-          <TabsContent value="courses">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {content.courses.map((course, index) => (
-                <Card key={index} className="bg-gray-800 border-blue-500 shadow-lg mb-8">
-                  <CardHeader>
-                    <CardTitle className="text-2xl font-semibold text-white">{course.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent className="text-gray-300">{course.description}</CardContent>
-                </Card>
-              ))}
-            </div>
-          </TabsContent>
+    return (
+      <div className="min-h-screen bg-gradient-to-b from-[#04002a] to-[#090047] text-white py-12 px-4 sm:px-6 lg:px-8">
+        <motion.div 
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="max-w-7xl mx-auto"
+        >
+          <h1 className="text-5xl md:text-7xl font-bold text-center mt-48 mb-16 text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.7)]">About Markaz Rooh-ul-Islam</h1>
           
-          <TabsContent value="essentialInfo">
-            <ul className="space-y-4">
-              {content.essentialInfo.map((info, index) => (
-                <li key={index} className="text-gray-300 text-lg">
-                  <span className="font-semibold text-white">{info.label}:</span> {info.value}
-                </li>
+          <Tabs defaultValue="courses" className="mb-16">
+            <TabsList className="grid w-full grid-cols-2 mb-8">
+              <TabsTrigger value="courses">Courses</TabsTrigger>
+              <TabsTrigger value="essentialInfo">Essential Info</TabsTrigger>
+            </TabsList>
+            <TabsContent value="courses">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {content.courses.map((course, index) => (
+                  <Card key={index} className="bg-gray-800 border-blue-500 shadow-lg mb-8">
+                    <CardHeader>
+                      <CardTitle className="text-2xl font-semibold text-white">{course.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent className="text-gray-300">{course.description}</CardContent>
+                  </Card>
+                ))}
+              </div>
+            </TabsContent>
+            
+            <TabsContent value="essentialInfo">
+              <ul className="space-y-4">
+                {content.essentialInfo.map((info, index) => (
+                  <li key={index} className="text-gray-300 text-lg">
+                    <span className="font-semibold text-white">{info.label}:</span> {info.value}
+                  </li>
+                ))}
+              </ul>
+            </TabsContent>
+          </Tabs>
+  
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.5 }}
+            className="mb-16"
+          >
+            <h2 className="text-4xl font-bold mb-8 text-center text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.7)]">Extracurricular Activities</h2>
+            <Accordion type="single" collapsible className="w-full">
+              {content.extracurriculars.map((activity, index) => (
+                <AccordionItem key={index} value={`item-${index}`}>
+                  <AccordionTrigger className="text-xl text-white hover:text-blue-400">{activity.question}</AccordionTrigger>
+                  <AccordionContent className="text-gray-300 text-lg">{activity.answer}</AccordionContent>
+                </AccordionItem>
               ))}
-            </ul>
-          </TabsContent>
-        </Tabs>
-
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.5 }}
-          className="mb-16"
-        >
-          <h2 className="text-4xl font-bold mb-8 text-center text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.7)]">Extracurricular Activities</h2>
-          <Accordion type="single" collapsible className="w-full">
-            {content.extracurriculars.map((activity, index) => (
-              <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger className="text-xl text-white hover:text-blue-400">{activity.question}</AccordionTrigger>
-                <AccordionContent className="text-gray-300 text-lg">{activity.answer}</AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+            </Accordion>
+          </motion.div>
+  
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6, duration: 0.5 }}
+            className="text-center"
+          >
+            <h2 className="text-4xl font-bold mb-6 text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.7)]">Ready to Join?</h2>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <Link href="/apply" passHref>
+                <Button className="bg-green-600 hover:bg-green-700 text-white py-3 px-8 rounded-lg text-lg font-semibold transition duration-300">
+                  Start Application
+                </Button>
+              </Link>
+              <Link href="/contact" passHref>
+                <Button className="bg-blue-600 hover:bg-blue-700 text-white py-3 px-8 rounded-lg text-lg font-semibold transition duration-300">
+                  Contact Us
+                </Button>
+              </Link>
+            </div>
+          </motion.div>
         </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 0.5 }}
-          className="text-center"
-        >
-          <h2 className="text-4xl font-bold mb-6 text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.7)]">Ready to Join?</h2>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link href="/apply" passHref>
-              <Button className="bg-green-600 hover:bg-green-700 text-white py-3 px-8 rounded-lg text-lg font-semibold transition duration-300">
-                Start Application
-              </Button>
-            </Link>
-            <Link href="/contact" passHref>
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white py-3 px-8 rounded-lg text-lg font-semibold transition duration-300">
-                Contact Us
-              </Button>
-            </Link>
-          </div>
-        </motion.div>
-      </motion.div>
-    </div>
-  )
-}
+      </div>
+    )
+  }

@@ -45,15 +45,16 @@ export default function ContactPage() {
     toast({
       title: "Message Sent",
       description: "We&apos;ve received your message and will get back to you soon.",
-    })    
+    })
+      
     setFormData({ name: '', email: '', subject: '', message: '' })
   }
 
   const contactInfo = [
-    { icon: Phone, text: '+1 (555) 123-4567', href: 'tel:+15551234567' },
-    { icon: Mail, text: 'info@islamicinstitution.com', href: 'mailto:info@islamicinstitution.com' },
+    { icon: Phone, text: '+92 3209400351', href: 'tel:+923209400351' },
+    { icon: Mail, text: 'info@roohulislam.com', href: 'mailto:info@roohulislam.com' },
     { icon: MapPin, text: '123 Knowledge Street, Wisdom City, 12345', href: 'https://maps.google.com' },
-    { icon: Globe, text: 'www.islamicinstitution.com', href: 'https://www.islamicinstitution.com' },
+    { icon: Globe, text: 'www.roohulislam.vercel.app', href: 'https://www.roohulislam.vercel.app' },
     { icon: Clock, text: 'Mon-Fri: 9AM-5PM', href: '#' },
   ]
 
@@ -109,7 +110,7 @@ export default function ContactPage() {
               <CardHeader>
                 <CardTitle className="text-3xl font-semibold text-white">Send Us a Message</CardTitle>
                 <CardDescription className="text-gray-300 text-lg">
-                  Fill out the form below and we'll get back to you as soon as possible.
+                  Fill out the form below and we will get back to you as soon as possible.
                 </CardDescription>
               </CardHeader>
               <CardContent>

@@ -1,5 +1,4 @@
 "use client"
-
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { ChevronDown, Menu, X } from "lucide-react"
@@ -8,7 +7,6 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
 
- 
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768) // Adjust threshold for mobile here
@@ -39,16 +37,18 @@ export default function Navbar() {
             </Link>
 
             {/* Mobile Menu Button */}
-            <button
-              className="md:hidden"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-              {isMenuOpen ? (
-                <X className="h-6 w-6 text-black" />
-              ) : (
-                <Menu className="h-6 w-6 text-black" />
-              )}
-            </button>
+            {isMobile && (
+              <button
+                className="md:hidden"
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+              >
+                {isMenuOpen ? (
+                  <X className="h-6 w-6 text-black" />
+                ) : (
+                  <Menu className="h-6 w-6 text-black" />
+                )}
+              </button>
+            )}
 
             {/* Navigation Links */}
             <nav

@@ -4,8 +4,7 @@ import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion, useAnimation } from 'framer-motion'
-import { Calendar, Clock, Users, Book, Award, MessageCircle } from 'lucide-react'
-
+import { Calendar, Clock, Users, Book, Award } from 'lucide-react'
 
 type Course = {
   name: string;
@@ -15,6 +14,7 @@ type Course = {
   schedule: string;
   curriculum: string[];
 };
+
 export default function CoursesPage() {
   const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
   const controls = useAnimation();
@@ -90,9 +90,8 @@ export default function CoursesPage() {
     { name: "Ahmed", course: "Computer", text: "This course perfectly blended technology with Islamic values." },
     { name: "Fatima", course: "Tailor", text: "I now create modest fashion that's both beautiful and respectful." },
     { name: "Yusuf", course: "Hafiz-ul Quran", text: "The memorization techniques taught here are unparalleled." },
-    { name: "Aisha", course: "Traditional Studies", text: "I've gained a deeper understanding of our rich Islamic heritage." },
+    { name: "Aisha", course: "Traditional Studies", text: "I have gained a deeper understanding of our rich Islamic heritage." },
   ];
-  
 
   return (
     <div className="min-h-screen bg-[#04002a] text-white py-12 px-4 sm:px-6 lg:px-8">
@@ -102,7 +101,8 @@ export default function CoursesPage() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="max-w-7xl mx-auto"
       >
-        <h1 className="text-5xl md:text-7xl font-bold text-center mb-16 text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.7)]">Our Courses</h1>
+        <h1 className="text-5xl md:text-7xl font-bold text-center mb-16 text-white 
+        drop-shadow-[0_0_10px_rgba(255,255,255,0.7)]">Our Courses</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {courses.map((course, index) => (
             <motion.div 
@@ -173,80 +173,58 @@ export default function CoursesPage() {
           </motion.div>
         )}
 
-<motion.div 
-  initial={{ opacity: 0, y: 50 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ delay: 0.5, duration: 0.5 }}
-  className="mt-24 text-center"
->
-  <h2 className="text-4xl md:text-5xl font-bold mb-12 text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.7)]">
-    Why Choose Our Institution?
-  </h2>
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-8">
-    {[
-      { icon: Users, title: 'Expert Instructors', description: 'Learn from experienced scholars and professionals in their fields.' },
-      { icon: Book, title: 'Comprehensive Curriculum', description: 'Our courses cover both traditional and modern subjects for a well-rounded education.' },
-      { icon: Award, title: 'Recognized Certification', description: 'Gain certificates that are respected in both Islamic and professional circles.' }
-    ].map((item, index) => (
-      <motion.div
-        key={index}
-        custom={index}
-        initial={{ opacity: 0, y: 50 }}
-        animate={controls}
-        className="bg-gray-800 p-8 rounded-lg shadow-lg border-2 border-blue-400"
-      >
-        <item.icon className="h-16 w-16 text-blue-400 mx-auto mb-6" />
-        <h3 className="text-2xl font-semibold mb-4 text-white">{item.title}</h3>
-        <p className="text-gray-100 text-lg leading-relaxed">{item.description}</p>
-      </motion.div>
-    ))}
-  </div>
-</motion.div>
-
-
-        <motion.div
+        <motion.div 
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.7, duration: 0.5 }}
-          className="mt-24"
+          transition={{ delay: 0.5, duration: 0.5 }}
+          className="mt-24 text-center"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.7)]">Student Testimonials</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {testimonials.map((testimonial, index) => (
-              <motion.div
+          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.7)]">
+            Why Choose Our Institution?
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-8">
+            {[  
+              { icon: Users, title: 'Expert Instructors', description: 'Learn from experienced scholars and professionals in their fields.' },
+              { icon: Book, title: 'Comprehensive Curriculum', description: 'Our courses cover everything you need to excel in your chosen field.' },
+              { icon: Award, title: 'Accreditation', description: 'We offer accredited programs that help you earn valuable qualifications.' },
+            ].map((item, index) => (
+              <motion.div 
                 key={index}
-                custom={index}
                 initial={{ opacity: 0, y: 50 }}
-                animate={controls}
-                className="bg-gray-800 p-8 rounded-lg shadow-lg border-2 border-blue-400"
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5 + index * 0.2 }}
+                className="bg-gray-800 p-6 rounded-lg shadow-lg text-center"
               >
-                <p className="text-gray-100 mb-6 text-xl italic leading-relaxed">"{testimonial.text}"</p>
-                <div className="flex items-center">
-                  <div className="h-14 w-14 rounded-full bg-gradient-to-r from-blue-400 to-purple-600 flex items-center justify-center mr-4 text-2xl text-white font-bold">
-                    {testimonial.name[0]}
-                  </div>
-                  <div>
-                    <p className="font-semibold text-xl text-white">{testimonial.name}</p>
-                    <p className="text-lg text-gray-300">{testimonial.course} Course</p>
-                  </div>
-                </div>
+                <item.icon className="text-4xl text-blue-400 mx-auto" />
+                <h3 className="text-xl font-semibold text-white mt-4">{item.title}</h3>
+                <p className="text-gray-300 mt-3">{item.description}</p>
               </motion.div>
             ))}
           </div>
         </motion.div>
 
-        <motion.div
+        <motion.div 
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.9, duration: 0.5 }}
+          transition={{ delay: 0.7, duration: 0.5 }}
           className="mt-24 text-center"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.7)]">Ready to Start Your Journey?</h2>
-          <p className="text-2xl text-gray-100 mb-12 max-w-3xl mx-auto">Join our community of learners and embark on a path of knowledge and spiritual growth.</p>
-          <Link href="/contact" className="inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 px-8 rounded-lg text-xl font-semibold hover:from-blue-700 hover:to-purple-700 transition duration-300 transform hover:-translate-y-1 hover:shadow-lg">
-            <MessageCircle className="mr-3 h-6 w-6" />
-            Contact Us Today
-          </Link>
+          <h2 className="text-4xl font-bold text-white mb-12 drop-shadow-[0_0_10px_rgba(255,255,255,0.7)]">What Our Students Say</h2>
+          <div className="flex justify-center space-x-8">
+            {testimonials.map((testimonial, index) => (
+              <motion.div 
+                key={index}
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5 + index * 0.2 }}
+                className="bg-gray-800 p-6 rounded-lg shadow-lg max-w-xs"
+              >
+                <p className="text-lg text-gray-100 mb-4">&quot;{testimonial.text}&quot;</p>
+                <h3 className="text-xl font-semibold text-white">{testimonial.name}</h3>
+                <span className="text-gray-400">{testimonial.course} Student</span>
+              </motion.div>
+            ))}
+          </div>
         </motion.div>
       </motion.div>
     </div>
