@@ -2,7 +2,7 @@ import React from 'react';
 
 const AboutSection = () => {
   return (
-    <section className="bg-gradient-to-br from-cyan-500 via-blue-600 to-blue-900 py-20 text-white">
+    <section className="bg-cyan-800 py-20 text-white">
       <div className="container mx-auto px-4 text-center md:text-left relative">
         {/* Enhanced decorative background elements */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
@@ -14,7 +14,7 @@ const AboutSection = () => {
         <div className="flex flex-col md:flex-row items-center md:items-start gap-12 relative z-10">
           {/* Image Section with enhanced hover effects */}
           <div className="w-full md:w-1/2 relative group">
-            <div className="absolute inset-0 bg-cyan-400 rounded-xl blur-md opacity-20 group-hover:opacity-30 transition-all duration-300"></div>
+            <div className="absolute inset-0 bg-cyan-300 rounded-xl blur-md opacity-20 group-hover:opacity-30 transition-all duration-300"></div>
             <img
               src="bott.jpeg"
               alt="Maryam Institute"

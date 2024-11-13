@@ -1,13 +1,16 @@
 import LeadershipSection from "@/components/Leadershippsection"
 import AboutSection from "@/components/AboutInstitution"
 import Link from "next/link"
+import DonationSection from "@/components/DonationSection"
+import DonationBanner from "@/components/DonationBanner"
+import Mission from "@/components/Mission"
 
 export default function Component() {
   return (
-    <div className="min-h-screen bg-blue-900 relative"> {/* Adjusted to a lighter shade */}
+    <div className="min-h-screen relative"> {/* Adjusted to a lighter shade */}
       
       {/* Yellow background with Islamic pattern */}
-      <div className="h-24 w-full bg-blue-900 relative overflow-hidden"> {/* Darker blue for a richer contrast */}
+      <div className="h-24 w-full bg-cyan-950 relative overflow-hidden"> {/* Darker blue for a richer contrast */}
         <div
           className="absolute inset-0"
           style={{
@@ -38,7 +41,7 @@ export default function Component() {
           </p>
           <Link
             href="/discover"
-            className="rounded-md bg-[#02101a] px-8 py-3 font-medium text-white transition-colors hover:bg-[#B4941F]"
+            className="rounded-md bg-cyan-900  px-8 py-3 font-medium text-white transition-colors hover:bg-cyan-800"
           >
             Discover more
           </Link>
@@ -46,6 +49,11 @@ export default function Component() {
       </main>
       <LeadershipSection />
       <AboutSection />
+      <Mission />
+      <DonationBanner />
+      <DonationSection />
+      
+     
     </div>
   )
 }

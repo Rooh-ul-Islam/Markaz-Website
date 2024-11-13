@@ -84,7 +84,7 @@ export default function Navbar() {
               </Link>
               <Link
                 href="/contact"
-                className="rounded-lg bg-[#02101a] px-6 py-2 text-center text-sm font-medium text-white hover:bg-[#B4941F]"
+                className="rounded-lg bg-cyan-800  px-6 py-2 text-center text-sm font-medium text-white hover:bg-cyan-900"
               >
                 Contact Us
               </Link>

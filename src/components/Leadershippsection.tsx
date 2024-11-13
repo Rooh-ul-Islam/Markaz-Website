@@ -2,7 +2,7 @@ import React from 'react';
 
 const LeadershipSection = () => {
   return (
-    <section className="bg-gradient-to-br from-cyan-500 via-blue-600 to-blue-900 py-20">
+    <section className="bg-gradient-900 py-20">
       <div className="container mx-auto px-4 text-center relative">
         {/* Enhanced decorative background elements to match AboutSection */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
@@ -11,14 +11,15 @@ const LeadershipSection = () => {
           <div className="absolute top-40 left-20 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
         </div>
 
-        <h2 className="text-5xl font-bold text-white mb-4 relative inline-block">
+        <h2 className="text-5xl font-bold text-cyan-900 mb-4 relative inline-block">
           Our Leadership
           <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-300 to-blue-300 rounded-full"></div>
         </h2>
         
         <div className="flex flex-col md:flex-row justify-center gap-8 mt-12">
           {/* Patron in Chief */}
-          <div className="group flex flex-col items-center backdrop-blur-sm bg-white/10 p-8 rounded-xl border border-white/20 shadow-lg hover:bg-white/15 transition-all duration-300">
+          <div className="group flex flex-col items-center backdrop-blur-sm
+           bg-cyan-700 p-8 rounded-xl border border-white/20 shadow-lg hover:bg-cyan-600 transition-all duration-300">
             <div className="relative mb-6">
               <div className="absolute inset-0 bg-cyan-400 rounded-full blur-lg opacity-20 group-hover:opacity-30 transition-all duration-300"></div>
               <img
@@ -35,7 +36,8 @@ const LeadershipSection = () => {
           </div>
 
           {/* Chairman */}
-          <div className="group flex flex-col items-center backdrop-blur-sm bg-white/10 p-8 rounded-xl border border-white/20 shadow-lg hover:bg-white/15 transition-all duration-300">
+          <div className="group flex flex-col items-center backdrop-blur-sm
+           bg-cyan-700 p-8 rounded-xl border border-white/20 shadow-lg hover:bg-cyan-600 transition-all duration-300">
             <div className="relative mb-6">
               <div className="absolute inset-0 bg-cyan-400 rounded-full blur-lg opacity-20 group-hover:opacity-30 transition-all duration-300"></div>
               <img
@@ -52,7 +54,8 @@ const LeadershipSection = () => {
           </div>
 
           {/* Principal */}
-          <div className="group flex flex-col items-center backdrop-blur-sm bg-white/10 p-8 rounded-xl border border-white/20 shadow-lg hover:bg-white/15 transition-all duration-300">
+          <div className="group flex flex-col items-center backdrop-blur-sm
+           bg-cyan-700 p-8 rounded-xl border border-white/20 shadow-lg hover:bg-cyan-600 transition-all duration-300">
             <div className="relative mb-6">
               <div className="absolute inset-0 bg-cyan-400 rounded-full blur-lg opacity-20 group-hover:opacity-30 transition-all duration-300"></div>
               <img

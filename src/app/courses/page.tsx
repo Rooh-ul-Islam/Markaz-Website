@@ -94,15 +94,17 @@ export default function CoursesPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#04002a] text-white py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-cyan-900 text-cyan-50 py-12 px-4 sm:px-6 lg:px-8">
       <motion.div 
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="max-w-7xl mx-auto"
       >
-        <h1 className="text-5xl md:text-7xl font-bold text-center mb-16 text-white 
-        drop-shadow-[0_0_10px_rgba(255,255,255,0.7)]">Our Courses</h1>
+        <h1 className="text-5xl md:text-7xl font-bold text-center mt-36 mb-16 text-cyan-100 
+        drop-shadow-[0_0_10px_rgba(0,255,255,0.7)]">Our Courses</h1>
+        
+        {/* Courses Grid Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {courses.map((course, index) => (
             <motion.div 
@@ -112,7 +114,7 @@ export default function CoursesPage() {
               animate={controls}
               whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
               whileTap={{ scale: 0.95 }}
-              className="bg-gray-800 rounded-lg shadow-lg overflow-hidden cursor-pointer border-2 border-blue-400"
+              className="bg-cyan-800 rounded-lg shadow-lg overflow-hidden cursor-pointer border-2 border-cyan-400"
               onClick={() => setSelectedCourse(course)}
             >
               <div className="relative h-48 overflow-hidden">
@@ -123,16 +125,15 @@ export default function CoursesPage() {
                   objectFit="cover"
                   className="transition-transform duration-300 transform hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"></div>
-                <h2 className="absolute bottom-4 left-4 text-3xl font-bold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">{course.name}</h2>
+                <h2 className="absolute bottom-4 left-4 text-3xl font-bold text-cyan-50 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">{course.name}</h2>
               </div>
               <div className="p-6">
-                <p className="mt-2 text-gray-100 text-lg leading-relaxed">{course.description}</p>
-                <div className="mt-4 flex items-center text-lg text-gray-200">
-                  <Clock className="mr-2 h-5 w-5 text-blue-400" />
+                <p className="mt-2 text-cyan-100 text-lg leading-relaxed">{course.description}</p>
+                <div className="mt-4 flex items-center text-lg text-cyan-200">
+                  <Clock className="mr-2 h-5 w-5 text-cyan-400" />
                   <span>{course.duration}</span>
                 </div>
-                <Link href="/contact" className="mt-6 inline-block bg-blue-600 text-white py-3 px-6 rounded-lg text-lg font-semibold hover:bg-blue-700 transition duration-300 transform hover:-translate-y-1 hover:shadow-lg">
+                <Link href="/contact" className="mt-6 inline-block bg-cyan-600 text-cyan-50 py-3 px-6 rounded-lg text-lg font-semibold hover:bg-cyan-700 transition duration-300 transform hover:-translate-y-1 hover:shadow-lg">
                   Contact Now
                 </Link>
               </div>
@@ -140,25 +141,26 @@ export default function CoursesPage() {
           ))}
         </div>
 
+        {/* Course Details Modal */}
         {selectedCourse && (
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3 }}
-            className="mt-12 bg-gray-800 p-8 rounded-lg shadow-lg border-2 border-blue-400"
+            className="mt-12 bg-cyan-800 p-8 rounded-lg shadow-lg border-2 border-cyan-400"
           >
-            <h2 className="text-4xl font-bold mb-6 text-white">{selectedCourse.name} Curriculum</h2>
+            <h2 className="text-4xl font-bold mb-6 text-cyan-50">{selectedCourse.name} Curriculum</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               <div className="flex items-center text-xl">
-                <Clock className="mr-3 h-6 w-6 text-blue-400" />
-                <span className="text-gray-100">{selectedCourse.duration}</span>
+                <Clock className="mr-3 h-6 w-6 text-cyan-400" />
+                <span className="text-cyan-100">{selectedCourse.duration}</span>
               </div>
               <div className="flex items-center text-xl">
-                <Calendar className="mr-3 h-6 w-6 text-blue-400" />
-                <span className="text-gray-100">{selectedCourse.schedule}</span>
+                <Calendar className="mr-3 h-6 w-6 text-cyan-400" />
+                <span className="text-cyan-100">{selectedCourse.schedule}</span>
               </div>
             </div>
-            <ul className="list-disc list-inside space-y-3 text-lg text-gray-100">
+            <ul className="list-disc list-inside space-y-3 text-lg text-cyan-100">
               {selectedCourse.curriculum.map((item, index) => (
                 <motion.li 
                   key={index}
@@ -173,60 +175,33 @@ export default function CoursesPage() {
           </motion.div>
         )}
 
-        <motion.div 
+        {/* Testimonials Section */}
+         <motion.div 
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.5 }}
-          className="mt-24 text-center"
+          className="mt-24 text-center bg-cyan-800 p-8 rounded-lg shadow-lg border-2 border-cyan-400"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.7)]">
-            Why Choose Our Institution?
+          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-cyan-100 drop-shadow-[0_0_10px_rgba(0,255,255,0.7)]">
+            What Our Students Say
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-8">
-            {[  
-              { icon: Users, title: 'Expert Instructors', description: 'Learn from experienced scholars and professionals in their fields.' },
-              { icon: Book, title: 'Comprehensive Curriculum', description: 'Our courses cover everything you need to excel in your chosen field.' },
-              { icon: Award, title: 'Accreditation', description: 'We offer accredited programs that help you earn valuable qualifications.' },
-            ].map((item, index) => (
-              <motion.div 
-                key={index}
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5 + index * 0.2 }}
-                className="bg-gray-800 p-6 rounded-lg shadow-lg text-center"
-              >
-                <item.icon className="text-4xl text-blue-400 mx-auto" />
-                <h3 className="text-xl font-semibold text-white mt-4">{item.title}</h3>
-                <p className="text-gray-300 mt-3">{item.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
-        <motion.div 
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.7, duration: 0.5 }}
-          className="mt-24 text-center"
-        >
-          <h2 className="text-4xl font-bold text-white mb-12 drop-shadow-[0_0_10px_rgba(255,255,255,0.7)]">What Our Students Say</h2>
-          <div className="flex justify-center space-x-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             {testimonials.map((testimonial, index) => (
               <motion.div 
                 key={index}
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5 + index * 0.2 }}
-                className="bg-gray-800 p-6 rounded-lg shadow-lg max-w-xs"
+                transition={{ delay: index * 0.1 }}
+                className="text-center text-cyan-50"
               >
-                <p className="text-lg text-gray-100 mb-4">&quot;{testimonial.text}&quot;</p>
-                <h3 className="text-xl font-semibold text-white">{testimonial.name}</h3>
-                <span className="text-gray-400">{testimonial.course} Student</span>
+                <p className="italic text-lg text-cyan-200 mb-4">"{testimonial.text}"</p>
+                <h3 className="font-bold text-xl text-cyan-100">{testimonial.name}</h3>
+                <p className="text-md text-cyan-300">{testimonial.course}</p>
               </motion.div>
             ))}
           </div>
-        </motion.div>
+         </motion.div>
       </motion.div>
     </div>
-  )
+  );
 }

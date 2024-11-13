@@ -73,7 +73,7 @@ const IslamicPattern = () => (
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-br from-cyan-600 via-blue-700 to-blue-950 text-white relative">
+    <footer className=" text-white relative">
       {/* Background blobs */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         <div className="absolute top-20 right-10 w-72 h-72 bg-sky-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
@@ -83,7 +83,7 @@ export default function Footer() {
 
       <div className="container mx-auto flex flex-col lg:flex-row lg:justify-between gap-12 px-6 py-12 relative z-10">
         {/* About Us Section */}
-        <div className="flex flex-col items-center lg:items-start lg:w-1/3 space-y-4 backdrop-blur-sm bg-white/5 p-6 rounded-xl border border-white/10">
+        <div className="flex bg-cyan-800 flex-col items-center lg:items-start lg:w-1/3 space-y-4 backdrop-blur-sm bg-white/5 p-6 rounded-xl border border-white/10">
           <h2 className="text-lg font-semibold uppercase text-cyan-300 relative">
             About Us
             <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-cyan-500 to-blue-300 rounded-full"></div>
@@ -106,7 +106,7 @@ export default function Footer() {
         </div>
 
         {/* Student Resources Section */}
-        <div className="lg:w-1/3 space-y-4 backdrop-blur-sm bg-white/5 p-6 rounded-xl border border-white/10">
+        <div className="lg:w-1/3 space-y-4 backdrop-blur-sm bg-cyan-800 p-6 rounded-xl border border-white/10">
           <h2 className="text-lg font-semibold uppercase text-center lg:text-left text-cyan-300 relative">
             Student Resources
             <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-cyan-300 to-blue-300 rounded-full"></div>
@@ -128,7 +128,7 @@ export default function Footer() {
         </div>
 
         {/* Contact Info Section */}
-        <div className="lg:w-1/3 space-y-4 text-center lg:text-left backdrop-blur-sm bg-white/5 p-6 rounded-xl border border-white/10">
+        <div className="lg:w-1/3 space-y-4 text-center lg:text-left backdrop-blur-sm bg-cyan-800 p-6 rounded-xl border border-white/10">
           <h2 className="text-lg font-semibold uppercase text-cyan-300 relative">
             Contact Info
             <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-cyan-300 to-blue-300 rounded-full"></div>
@@ -146,7 +146,7 @@ export default function Footer() {
             />
             <button
               type="submit"
-              className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-md hover:from-cyan-400 hover:to-blue-400 transition-colors"
+              className="bg-cyan-500  text-white px-4 py-2 rounded-md hover:from-cyan-400 hover:to-blue-400 transition-colors"
             >
               Subscribe
             </button>
@@ -156,11 +156,10 @@ export default function Footer() {
 
       {/* Bottom Section with Islamic Pattern */}
       <div className="relative z-10">
-        <div className="bg-gradient-to-r  bg-blue-900 py-4 text-center text-sm text-blue-100 backdrop-blur-sm bg-white/5 border-t border-white/10">
+        <div className="bg-cyan-700 py-4 text-center text-sm text-blue-100 backdrop-blur-sm bg-white/5 border-t border-white/10">
           <p>&copy; 2024 Markaz Rooh-ul-Islam</p>
         </div>
-        <div className="bg-gradient-to-r bg-blue-900">
-          <IslamicPattern />
+        <div className="bg-gradient-to-r b">
         </div>
       </div>
     </footer>
