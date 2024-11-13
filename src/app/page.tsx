@@ -4,10 +4,10 @@ import Link from "next/link"
 
 export default function Component() {
   return (
-    <div className="min-h-screen bg-[#04002a] relative">
+    <div className="min-h-screen bg-blue-900 relative"> {/* Adjusted to a lighter shade */}
       
       {/* Yellow background with Islamic pattern */}
-      <div className="h-24 w-full bg-[#04002a] relative overflow-hidden">
+      <div className="h-24 w-full bg-blue-900 relative overflow-hidden"> {/* Darker blue for a richer contrast */}
         <div
           className="absolute inset-0"
           style={{
@@ -23,7 +23,7 @@ export default function Component() {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/back.jpeg')`,
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('/back.jpeg')`, // adjusted gradient for a subtler effect
           }}
         />
         
@@ -49,4 +49,3 @@ export default function Component() {
     </div>
   )
 }
-
