@@ -37,7 +37,9 @@ export default function RootLayout({
          </div>
        
         {children}
+
         <Mission />
+        
         <DonationBanner />
 
         <Footer />
