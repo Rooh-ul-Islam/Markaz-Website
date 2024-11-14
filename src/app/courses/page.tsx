@@ -177,32 +177,33 @@ export default function CoursesPage() {
         )}
 
         {/* Testimonials Section */}
-         <motion.div 
+         {/* Testimonials Section */}
+          <motion.div 
           initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.5 }}
-          className="mt-24 text-center bg-cyan-50 p-8 rounded-lg shadow-lg border-2
-           border-cyan-400"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-cyan-800">
-            What Our Students Say
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-            {testimonials.map((testimonial, index) => (
-              <motion.div 
-                key={index}
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="text-center text-cyan-50"
-              >
-                <p className="italic text-lg text-cyan-800 mb-4">"{testimonial.text}"</p>
-                <h3 className="font-bold text-xl text-cyan-950">{testimonial.name}</h3>
-                <p className="text-md text-cyan-600">{testimonial.course}</p>
-              </motion.div>
+        animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.5, duration: 0.5 }}
+  className="mt-24 text-center bg-cyan-50 p-8 rounded-lg shadow-lg border-2 border-cyan-400"
+>
+           <h2 className="text-4xl md:text-5xl font-bold mb-12 text-cyan-800">
+          What Our Students Say
+         </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          {testimonials.map((testimonial, index) => (
+          <motion.div 
+           key={index}
+           initial={{ opacity: 0, y: 50 }}
+           animate={{ opacity: 1, y: 0 }}
+           transition={{ delay: index * 0.1 }}
+           className="text-center text-cyan-50"
+           >
+            <p className="italic text-lg text-cyan-800 mb-4">&ldquo;{testimonial.text}&rdquo;</p>
+            <h3 className="font-bold text-xl text-cyan-950">{testimonial.name}</h3>
+             <p className="text-md text-cyan-600">{testimonial.course}</p>
+           </motion.div>
             ))}
           </div>
-         </motion.div>
+        </motion.div>
+
       </motion.div>
     </div>
   );
