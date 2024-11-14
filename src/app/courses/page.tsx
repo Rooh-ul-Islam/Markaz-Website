@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion, useAnimation } from 'framer-motion'
@@ -16,7 +16,6 @@ type Course = {
 };
 
 export default function CoursesPage() {
-  const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
   const controls = useAnimation();
 
   useEffect(() => {
@@ -129,13 +128,6 @@ export default function CoursesPage() {
     },
   ];
 
-  // const testimonials = [
-  //   { name: "Ahmed", course: "Computer", text: "This course perfectly blended technology with Islamic values." },
-  //   { name: "Fatima", course: "Tailor", text: "I now create modest fashion that's both beautiful and respectful." },
-  //   { name: "Yusuf", course: "Hafiz-ul Quran", text: "The memorization techniques taught here are unparalleled." },
-  //   { name: "Aisha", course: "Traditional Studies", text: "I have gained a deeper understanding of our rich Islamic heritage." },
-  // ];
-
   return (
     <div className="min-h-screen bg-cyan-900 text-cyan-50 py-12 px-4 sm:px-6 lg:px-8">
       <motion.div 
@@ -145,9 +137,9 @@ export default function CoursesPage() {
         className="max-w-7xl mx-auto"
       >
         {/* New Courses Section */}
-        <h1 className="text-5xl md:text-7xl font-bold text-center mb-16 mt-40
-         text-cyan-50 underline decoration-cyan-500 
-        ">Our Courses</h1>
+        <h1 className="text-5xl md:text-7xl font-bold text-center mb-16 mt-40 text-cyan-50 underline decoration-cyan-500">
+          Our Courses
+        </h1>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {courses.map((course, index) => (
@@ -159,7 +151,6 @@ export default function CoursesPage() {
               whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
               whileTap={{ scale: 0.95 }}
               className="bg-cyan-900 rounded-lg shadow-lg overflow-hidden cursor-pointer border-2 border-cyan-400"
-              onClick={() => setSelectedCourse(course)}
             >
               <div className="relative h-48 overflow-hidden">
                 <Image
@@ -169,10 +160,14 @@ export default function CoursesPage() {
                   objectFit="cover"
                   className="transition-transform duration-300 transform hover:scale-110"
                 />
-                <h2 className="absolute bottom-4 left-4 text-3xl font-bold text-cyan-50 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">{course.name}</h2>
+                <h2 className="absolute bottom-4 left-4 text-3xl font-bold text-cyan-50 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                  {course.name}
+                </h2>
               </div>
               <div className="p-6">
-                <p className="mt-2 text-cyan-100 text-lg leading-relaxed">{course.description}</p>
+                <p className="mt-2 text-cyan-100 text-lg leading-relaxed">
+                  {course.description}
+                </p>
                 <div className="mt-4 flex items-center text-lg text-cyan-200">
                   <Clock className="mr-2 h-5 w-5 text-cyan-400" />
                   <span>{course.duration}</span>
@@ -186,11 +181,10 @@ export default function CoursesPage() {
         </div>
 
         {/* Existing Activities Section */}
-        <h1 className="text-5xl md:text-7xl font-bold text-center mt-36 mb-16
-         text-cyan-50 underline decoration-cyan-500 
-        ">Our Activities</h1>
+        <h1 className="text-5xl md:text-7xl font-bold text-center mt-36 mb-16 text-cyan-50 underline decoration-cyan-500">
+          Our Activities
+        </h1>
         
-        {/* Render Activities Grid Section Here */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {activities.map((activity, index) => (
             <motion.div 
@@ -201,7 +195,6 @@ export default function CoursesPage() {
               whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
               whileTap={{ scale: 0.95 }}
               className="bg-cyan-900 rounded-lg shadow-lg overflow-hidden cursor-pointer border-2 border-cyan-400"
-              onClick={() => setSelectedCourse(activity)}
             >
               <div className="relative h-48 overflow-hidden">
                 <Image
@@ -211,10 +204,14 @@ export default function CoursesPage() {
                   objectFit="cover"
                   className="transition-transform duration-300 transform hover:scale-110"
                 />
-                <h2 className="absolute bottom-4 left-4 text-3xl font-bold text-cyan-50 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">{activity.name}</h2>
+                <h2 className="absolute bottom-4 left-4 text-3xl font-bold text-cyan-50 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                  {activity.name}
+                </h2>
               </div>
               <div className="p-6">
-                <p className="mt-2 text-cyan-100 text-lg leading-relaxed">{activity.description}</p>
+                <p className="mt-2 text-cyan-100 text-lg leading-relaxed">
+                  {activity.description}
+                </p>
                 <div className="mt-4 flex items-center text-lg text-cyan-200">
                   <Clock className="mr-2 h-5 w-5 text-cyan-400" />
                   <span>{activity.duration}</span>
