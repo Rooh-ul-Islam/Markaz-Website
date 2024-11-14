@@ -101,8 +101,9 @@ export default function CoursesPage() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="max-w-7xl mx-auto"
       >
-        <h1 className="text-5xl md:text-7xl font-bold text-center mt-36 mb-16 text-cyan-100 
-        drop-shadow-[0_0_10px_rgba(0,255,255,0.7)]">Our Courses</h1>
+        <h1 className="text-5xl md:text-7xl font-bold text-center mt-36 mb-16
+         text-cyan-50 underline decoration-cyan-500 
+        ">Our Courses</h1>
         
         {/* Courses Grid Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -114,7 +115,7 @@ export default function CoursesPage() {
               animate={controls}
               whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
               whileTap={{ scale: 0.95 }}
-              className="bg-cyan-800 rounded-lg shadow-lg overflow-hidden cursor-pointer border-2 border-cyan-400"
+              className="bg-cyan-900 rounded-lg shadow-lg overflow-hidden cursor-pointer border-2 border-cyan-400"
               onClick={() => setSelectedCourse(course)}
             >
               <div className="relative h-48 overflow-hidden">
@@ -180,9 +181,10 @@ export default function CoursesPage() {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.5 }}
-          className="mt-24 text-center bg-cyan-800 p-8 rounded-lg shadow-lg border-2 border-cyan-400"
+          className="mt-24 text-center bg-cyan-50 p-8 rounded-lg shadow-lg border-2
+           border-cyan-400"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-cyan-100 drop-shadow-[0_0_10px_rgba(0,255,255,0.7)]">
+          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-cyan-800">
             What Our Students Say
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
@@ -194,9 +196,9 @@ export default function CoursesPage() {
                 transition={{ delay: index * 0.1 }}
                 className="text-center text-cyan-50"
               >
-                <p className="italic text-lg text-cyan-200 mb-4">"{testimonial.text}"</p>
-                <h3 className="font-bold text-xl text-cyan-100">{testimonial.name}</h3>
-                <p className="text-md text-cyan-300">{testimonial.course}</p>
+                <p className="italic text-lg text-cyan-800 mb-4">"{testimonial.text}"</p>
+                <h3 className="font-bold text-xl text-cyan-950">{testimonial.name}</h3>
+                <p className="text-md text-cyan-600">{testimonial.course}</p>
               </motion.div>
             ))}
           </div>

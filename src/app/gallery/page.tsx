@@ -16,21 +16,30 @@ export default function GalleryPage() {
     { src: '/trip.jpeg', alt: 'Trip' },
     { src: '/visits.jpeg', alt: 'Library interior' },
     { src: '/tailor.jpeg', alt: 'Tailor' },
-    
     { src: '/plantation.jpeg', alt: 'Plantation' },
-  ]
-
-  
+    { src: '/1.jpeg', alt: 'Graduation ceremony' },
+    { src: '/2.jpeg', alt: 'Student activities' },
+    { src: '/3.jpeg', alt: 'Trip' },
+    { src: '/4.jpeg', alt: 'Library interior' },
+    { src: '/5.jpeg', alt: 'Tailor' },
+    { src: '/6.jpeg', alt: 'Plantation' },
+    { src: '/7.jpeg', alt: 'Graduation ceremony' },
+    { src: '/8.jpeg', alt: 'Student activities' },
+    { src: '/11.jpeg', alt: 'Tailor' },
+    { src: '/12.jpeg', alt: 'Plantation' },
+    { src: '/14.jpeg', alt: 'Library interior' },
+    { src: '/15.jpeg', alt: 'Tailor' },
+  ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b pt-15 from-[#04002a] to-[#090047] text-white py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-b from-cyan-800 to-cyan-900 text-cyan-50 py-12 px-4 sm:px-6 lg:px-8">
       <motion.div 
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="max-w-7xl mx-auto"
       >
-        <h1 className="text-5xl md:text-7xl font-bold text-center mb-16 text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.7)]">Our Gallery</h1>
+        <h1 className="text-5xl md:text-7xl font-bold text-center mb-16 mt-44 text-white drop-shadow-lg">Our Gallery</h1>
         
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -38,65 +47,52 @@ export default function GalleryPage() {
           transition={{ delay: 0.2, duration: 0.5 }}
           className="mb-16"
         >
-          <h2 className="text-3xl font-bold mb-8 text-center text-white drop-shadow-[0_0_5px_rgba(255,255,255,0.7)]">Campus Life</h2>
+          <h2 className="text-3xl font-bold mb-8 text-center text-white drop-shadow-lg">Campus Life</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {horizontalImages.map((image, index) => (
               <motion.div
-              key={index}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Card className="bg-gray-800 border-blue-500 shadow-lg overflow-hidden">
-                <CardContent className="p-0">
-                  <Dialog>
-                    <DialogTrigger asChild>
-                      <Button variant="ghost" className="w-full p-0 h-auto" onClick={() => setSelectedImage(image.src)}>
-                        <Image
-                          src={image.src}
-                          alt={image.alt}
-                          width={500}
-                          height={300}
-                          className="w-full h-auto object-cover transition-transform duration-300 hover:scale-110"
-                        />
-                      </Button>
-                    </DialogTrigger>
-                    <DialogContent className="max-w-4xl bg-gray-900 border-blue-500">
-                      <DialogHeader>
-                        <DialogTitle className="text-2xl font-bold text-white">{image.alt}</DialogTitle>
-                      </DialogHeader>
-                      {selectedImage && (
-                        <Image
-                          src={selectedImage}
-                          alt={image.alt}
-                          width={1000}
-                          height={600}
-                          className="w-full h-auto object-contain"
-                        />
-                      )}
-                    </DialogContent>
-                  </Dialog>
-                </CardContent>
-              </Card>
-            </motion.div>            
+                key={index}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Card className="bg-cyan-800 border-cyan-600 shadow-lg overflow-hidden">
+                  <CardContent className="p-0">
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <Button variant="ghost" className="w-full p-0 h-auto" onClick={() => setSelectedImage(image.src)}>
+                          <div className="w-full h-72 relative">
+                            <Image
+                              src={image.src}
+                              alt={image.alt}
+                              layout="fill"
+                              objectFit="cover"
+                              className="transition-transform duration-300 hover:scale-110"
+                            />
+                          </div>
+                        </Button>
+                      </DialogTrigger>
+                      <DialogContent className="max-w-4xl bg-cyan-900 border-cyan-600">
+                        <DialogHeader>
+                          <DialogTitle className="text-2xl font-bold text-white">{image.alt}</DialogTitle>
+                        </DialogHeader>
+                        {selectedImage && (
+                          <div className="relative w-full h-96">
+                            <Image
+                              src={selectedImage}
+                              alt={image.alt}
+                              layout="fill"
+                              objectFit="contain"
+                              className="w-full h-full"
+                            />
+                          </div>
+                        )}
+                      </DialogContent>
+                    </Dialog>
+                  </CardContent>
+                </Card>
+              </motion.div>            
             ))}
           </div>
-        </motion.div>
-
-
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 0.5 }}
-          className="text-center"
-        >
-          <h2 className="text-4xl font-bold mb-6 text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.7)]">Experience Our Campus</h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            These images offer a glimpse into the vibrant life and beautiful architecture of our institution. 
-            We invite you to visit and experience the inspiring atmosphere firsthand.
-          </p>
-          <Button className="bg-blue-600 hover:bg-blue-700 text-white py-3 px-8 rounded-lg text-lg font-semibold transition duration-300">
-            Schedule a Campus Tour
-          </Button>
         </motion.div>
       </motion.div>
     </div>

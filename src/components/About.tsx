@@ -1,15 +1,13 @@
-'use client'
+import React from 'react'
 
 import { motion } from 'framer-motion'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import About from '@/components/About'
-import Extracurricular from '@/components/Extracurricular'
-import JoinUs from '@/components/JoinUs'
+import Link from 'next/link'
 
-export default function AdmissionsPage() {
-
+const About = () => {
   const content = {
     courses: [
       { 
@@ -52,24 +50,46 @@ export default function AdmissionsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-cyan-700 py-12 px-4 sm:px-6 lg:px-8">
-      <motion.div 
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="max-w-7xl mx-auto"
-      >
+    <div className="flex justify-center items-center min-h-screen text-white py-7
+    px-7 sm:px-6 lg:px-8">
+      <div className='w-full mt-20 max-w-6xl backdrop-blur-sm bg-white/20 p-8 rounded-xl 
+      border border-white/25 shadow-lg hover:bg-white/20 transition-all duration-300'>
+        <h1 className="text-4xl md:text-6xl font-bold text-center mb-16 text-teal-200
+        underline decoration-cyan-300">
+          About Markaz Rooh-ul-Islam
+        </h1>
         
-        <About />
-         
-         <Extracurricular />
-
-    
-       <JoinUs />
-        
-
-
-      </motion.div>
+        <Tabs defaultValue="courses" className="mb-16">
+          <TabsList className="grid w-full grid-cols-2 mb-8">
+            <TabsTrigger value="courses" className=" text-cyan-700 text-base font-semibold">Courses</TabsTrigger>
+            <TabsTrigger value="essentialInfo" className="text-cyan-700 text-base font-semibold">Essential Info</TabsTrigger>
+          </TabsList>
+          <TabsContent value="courses">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {content.courses.map((course, index) => (
+                <Card key={index} className="bg-cyan-800 border-cyan-300 shadow-lg mb-8">
+                  <CardHeader>
+                    <CardTitle className="text-2xl font-semibold text-cyan-300">{course.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-cyan-100">{course.description}</CardContent>
+                </Card>
+              ))}
+            </div>
+          </TabsContent>
+          
+          <TabsContent value="essentialInfo">
+            <ul className="space-y-4">
+              {content.essentialInfo.map((info, index) => (
+                <li key={index} className="text-cyan-100 text-lg">
+                  <span className="font-semibold text-cyan-100">{info.label}:</span> {info.value}
+                </li>
+              ))}
+            </ul>
+          </TabsContent>
+        </Tabs>
+      </div>
     </div>
   )
 }
+
+export default About

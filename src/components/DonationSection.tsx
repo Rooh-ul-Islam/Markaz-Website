@@ -26,9 +26,10 @@ export default function DonationSection() {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="max-w-7xl mx-auto text-center"
       >
-        <h2 className="text-4xl md:text-5xl font-bold text-cyan-100 mb-8 drop-shadow-[0_0_10px_rgba(0,255,255,0.7)]">
-          Support Our Cause
+           <h2 className="text-5xl font-bold mb-6 text-white relative inline-block">
+          Support Markaz Rooh-ul-Islam Jamia
         </h2>
+        <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-300 to-blue-300 rounded-full"></div>
         <p className="text-lg md:text-xl text-cyan-200 mb-6">
           Your generous donation will help us continue our work and support communities in need. Every little bit counts!
         </p>

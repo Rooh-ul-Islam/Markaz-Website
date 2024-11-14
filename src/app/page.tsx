@@ -49,8 +49,6 @@ export default function Component() {
       </main>
       <LeadershipSection />
       <AboutSection />
-      <Mission />
-      <DonationBanner />
       <DonationSection />
       
      
