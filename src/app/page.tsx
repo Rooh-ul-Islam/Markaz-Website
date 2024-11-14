@@ -38,7 +38,7 @@ export default function Component() {
             bestows upon him the understanding of Deen.&quot; [Bukhari]
           </p>
           <Link
-            href="/discover"
+            href="/founder"
             className="rounded-md bg-cyan-900  px-8 py-3 font-medium text-white transition-colors hover:bg-cyan-800"
           >
             Discover more
