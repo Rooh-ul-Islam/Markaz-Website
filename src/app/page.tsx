@@ -1,7 +1,6 @@
-import LeadershipSection from "@/components/Leadershippsection"
 import AboutSection from "@/components/AboutInstitution"
 import Link from "next/link"
-import DonationSection from "@/components/DonationSection"
+import Testimonies from "@/components/Testimonies"
 
 
 export default function Component() {
@@ -46,9 +45,9 @@ export default function Component() {
           </Link>
         </div>
       </main>
-      <LeadershipSection />
+      {/* <LeadershipSection /> */}
+      <Testimonies />
       <AboutSection />
-      <DonationSection />
       
      
     </div>

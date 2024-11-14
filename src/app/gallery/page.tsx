@@ -47,8 +47,7 @@ export default function GalleryPage() {
           transition={{ delay: 0.2, duration: 0.5 }}
           className="mb-16"
         >
-          <h2 className="text-3xl font-bold mb-8 text-center text-white drop-shadow-lg">Campus Life</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {horizontalImages.map((image, index) => (
               <motion.div
                 key={index}

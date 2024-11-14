@@ -89,8 +89,10 @@ export default function Footer() {
             <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-cyan-500 to-blue-300 rounded-full"></div>
           </h2>
           <p className="text-center lg:text-left text-sm text-blue-100">
-            Markaz Rooh-ul-Islam Jamia is serving the religion of Islam and the nation with its own help and limited resources. Due to high expenses and low income, the institution is in debt every year in terms of ration and salaries. The institution is facing many difficulties, especially hostel and ration expenses for students.
-            The institution is dependent on monthly donations, which is facing a lot of difficulties in meeting the needs. 
+          The basis of the establishment of Jamia Ruhol-ul-Islam is to provide religious
+           services to the people of  Balochistan, especially the children belonging to 
+           the hilly and rural areas of Lasbela, to acquire religious, contemporary and
+           modern sciences and to expose them to Islamic teachings.
           </p>
           <div className="flex space-x-4">
             <Link href="/" className="text-cyan-300 hover:text-cyan-200 transition-colors">
