@@ -2,8 +2,7 @@ import LeadershipSection from "@/components/Leadershippsection"
 import AboutSection from "@/components/AboutInstitution"
 import Link from "next/link"
 import DonationSection from "@/components/DonationSection"
-import DonationBanner from "@/components/DonationBanner"
-import Mission from "@/components/Mission"
+
 
 export default function Component() {
   return (

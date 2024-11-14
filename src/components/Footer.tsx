@@ -2,7 +2,7 @@ import React from 'react';
 import Link from "next/link";
 import { Mail, Facebook, Youtube, Instagram } from "lucide-react";
 
-const IslamicPattern = () => (
+{/*const IslamicPattern = () => (
   <svg className="w-full h-20" viewBox="0 0 800 100" xmlns="http://www.w3.org/2000/svg">
     <pattern id="islamic-pattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
       <path
@@ -69,7 +69,7 @@ const IslamicPattern = () => (
     <rect width="100%" height="100%" fill="url(#islamic-pattern)" />
 
   </svg>
-);
+);*/}
 
 export default function Footer() {
   return (
@@ -166,23 +166,3 @@ export default function Footer() {
   );
 }
 
-const style = `
-@keyframes blob {
-  0% { transform: translate(0px, 0px) scale(1); }
-  33% { transform: translate(30px, -50px) scale(1.1); }
-  66% { transform: translate(-20px, 20px) scale(0.9); }
-  100% { transform: translate(0px, 0px) scale(1); }
-}
-
-.animate-blob {
-  animation: blob 7s infinite;
-}
-
-.animation-delay-2000 {
-  animation-delay: 2s;
-}
-
-.animation-delay-4000 {
-  animation-delay: 4s;
-}
-`;
