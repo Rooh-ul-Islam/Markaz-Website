@@ -110,11 +110,11 @@ export default function Footer() {
         {/* Student Resources Section */}
         <div className="lg:w-1/3 space-y-4 backdrop-blur-sm bg-cyan-800 p-6 rounded-xl border border-white/10">
           <h2 className="text-lg font-semibold uppercase text-center lg:text-left text-cyan-300 relative">
-            Student Resources
+            Courses
             <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-cyan-300 to-blue-300 rounded-full"></div>
           </h2>
           <ul className="space-y-3 text-sm text-center lg:text-left">
-            {['External Transfer Student', 'Repeat Year', 'Transfer Program Form', 'Academic Calendar'].map((item) => (
+            {['Shria 8 Year', 'Tehfiz-ul-Quran', 'Contemptory Studies', 'Traditional Studies'].map((item) => (
               <li key={item}>
                 <Link 
                   href="/" 

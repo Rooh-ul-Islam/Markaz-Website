@@ -52,7 +52,7 @@ export default function ContactPage() {
     { icon: Phone, text: '+92 3452311006', href: 'tel:+93452311006' },
     { icon: Mail, text: 'info@roohulislam.com', href: 'mailto:info@roohulislam.com' },
     { icon: MapPin, text: 'Jamia Rooh-ul-Islam Lakhra Road Uthal Lasbela Balochistan', href: 'https://maps.google.com' },
-    { icon: Globe, text: 'www.roohulislam.vercel.app', href: 'https://www.roohulislam.vercel.app' },
+    { icon: Globe, text: 'www.rooh-ul-islam.vercel.app', href: 'https://www.rooh-ul-islam.vercel.app' },
     { icon: Clock, text: 'Mon-Fri: 9AM-5PM', href: '#' },
   ]
 
