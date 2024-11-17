@@ -31,7 +31,7 @@ export default function Component() {
         {/* Content */}
         <div className="container relative mx-auto flex min-h-[calc(100vh-6rem)] flex-col items-center justify-center px-4 text-center text-white">
           <h1 className="mb-6 text-5xl font-bold leading-tight md:text-6xl lg:text-7xl">
-            Online Islamic Learning
+            Markaz Rooh-ul-Islam
           </h1>
           <p className="mb-8 max-w-3xl text-lg md:text-xl">
             The Messenger of Allah ﷺ said, &quot;When Allah wishes good for someone, He
