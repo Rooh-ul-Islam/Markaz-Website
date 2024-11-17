@@ -1,50 +1,57 @@
-import React from 'react';
+import Image from "next/image";
 
 const AboutSection = () => {
-  return (
-    <section className="bg-cyan-800 py-20 text-white">
-      <div className="container mx-auto px-4 text-center md:text-left relative">
-        {/* Enhanced decorative background elements */}
-        <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-          <div className="absolute top-20 right-10 w-72 h-72 bg-sky-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
-          <div className="absolute bottom-20 left-10 w-72 h-72 bg-cyan-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
-          <div className="absolute top-40 left-20 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
-        </div>
+	return (
+		<section className="bg-cyan-700 py-20 text-white">
+			<div className="container mx-auto px-4 text-center md:text-left relative">
+				<div className="flex flex-col md:flex-row items-center md:items-start gap-12 relative z-10">
+					<div className="w-full md:w-1/2 relative group">
+						<Image
+							src="/bott.jpeg"
+							alt="Maryam Institute"
+							width={800}
+							height={600}
+							className="w-full h-auto rounded-xl shadow-2xl relative z-10 transform transition duration-500 hover:scale-105 border border-white/20"
+						/>
+					</div>
 
-        <div className="flex flex-col md:flex-row items-center md:items-start gap-12 relative z-10">
-          {/* Image Section with enhanced hover effects */}
-          <div className="w-full md:w-1/2 relative group">
-            <div className="absolute inset-0 bg-cyan-300 rounded-xl blur-md opacity-20 group-hover:opacity-30 transition-all duration-300"></div>
-            <img
-              src="bott.jpeg"
-              alt="Maryam Institute"
-              className="w-full h-auto rounded-xl shadow-2xl relative z-10 transform transition duration-500 hover:scale-105 border border-white/20"
-            />
-          </div>
+					<div className="w-full md:w-1/2 backdrop-blur-sm bg-white/10 p-8 rounded-xl border border-white/20 shadow-lg hover:bg-white/15 transition-all duration-300 flex flex-col space-y-10 md:space-y-14">
+						<div>
+							<h3 className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0">
+								Our Vision
+							</h3>
+							<p className="leading-7 text-lg [&:not(:first-child)]:mt-6">
+								To provide comprehensive Islamic education while embracing
+								modern sciences, creating well-rounded individuals who serve
+								both their faith and society.
+							</p>
+						</div>
 
-          {/* Text Section with enhanced styling */}
-          <div className="w-full md:w-1/2 backdrop-blur-sm bg-white/10 p-8 rounded-xl border border-white/20 shadow-lg hover:bg-white/15 transition-all duration-300">
-            <h2 className="text-4xl font-bold mb-6 relative inline-block">
-              About Markaz Rooh-ul-Islam
-              <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-300 to-blue-300 rounded-full"></div>
-            </h2>
-            
-            <p className="text-lg mb-8 text-blue-100 leading-relaxed">
-              Rooh-ul-Islam is a non-commercial, non-political educational institution dedicated to classical Islamic learning and spirituality.
-              Rooh-ul-Islam is serving the religion of Islam and the nation with its own help and limited resources.
-            </p>
-            
-            <h3 className="text-2xl font-semibold mb-4 text-cyan-300">
-              Our Mission
-            </h3>
-            <p className="text-base mb-8 text-blue-100 leading-relaxed">
-              Our mission is to foster a learning environment that upholds traditional Islamic values and provides an enriching educational experience.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+						<div>
+							<h3 className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0">
+								Our Mission
+							</h3>
+							<ul className="text-lg mb-8 text-blue-100 leading-relaxed my-6 ml-6 list-disc [&>li]:mt-2 text-left">
+								<li>
+									Making righteous Muslims through religious education and
+									training
+								</li>
+								<li>
+									Providing opportunities for modern sciences alongside
+									religious studies
+								</li>
+								<li>Developing skilled citizens with strong character</li>
+								<li>
+									Serving the educational needs of Balochistan&apos;s rural and
+									hilly areas
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	);
 };
 
 export default AboutSection;
