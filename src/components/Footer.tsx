@@ -110,11 +110,11 @@ export default function Footer() {
         {/* Student Resources Section */}
         <div className="lg:w-1/3 space-y-4 backdrop-blur-sm bg-cyan-800 p-6 rounded-xl border border-white/10">
           <h2 className="text-lg font-semibold uppercase text-center lg:text-left text-cyan-300 relative">
-            Student Resources
+            Courses
             <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-cyan-300 to-blue-300 rounded-full"></div>
           </h2>
           <ul className="space-y-3 text-sm text-center lg:text-left">
-            {['External Transfer Student', 'Repeat Year', 'Transfer Program Form', 'Academic Calendar'].map((item) => (
+            {['Shria 8 Year', 'Tehfiz-ul-Quran', 'Contemptory Studies', 'Traditional Studies'].map((item) => (
               <li key={item}>
                 <Link 
                   href="/" 
@@ -130,30 +130,21 @@ export default function Footer() {
         </div>
 
         {/* Contact Info Section */}
-        <div className="lg:w-1/3 space-y-4 text-center lg:text-left backdrop-blur-sm bg-cyan-800 p-6 rounded-xl border border-white/10">
-          <h2 className="text-lg font-semibold uppercase text-cyan-300 relative">
-            Contact Info
+        <div className="lg:w-1/3 space-y-4 text-center lg:text-left backdrop-blur-sm bg-cyan-700 p-6 rounded-xl border border-white/10">
+            <h2 className="text-lg font-semibold uppercase text-cyan-300 relative">
+                Zakat, Donations, and Cooperation
             <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-cyan-300 to-blue-300 rounded-full"></div>
-          </h2>
-          <p className="flex items-center justify-center lg:justify-start space-x-2 text-blue-100">
-            <Mail className="h-5 w-5 text-cyan-300" />
-            <span>info@markaz.rooh.ul.islam.org</span>
-          </p>
-          <p className="text-sm text-blue-100">Subscribe to our mailing list</p>
-          <form className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
-            <input
-              type="email"
-              placeholder="Enter your email address"
-              className="p-2 rounded-md border border-cyan-400/30 bg-white/10 backdrop-blur-sm text-white placeholder-blue-100/50 focus:outline-none focus:border-cyan-300 transition-colors"
-            />
-            <button
-              type="submit"
-              className="bg-cyan-500  text-white px-4 py-2 rounded-md hover:from-cyan-400 hover:to-blue-400 transition-colors"
-            >
-              Subscribe
-            </button>
-          </form>
+            </h2>
+             <p className="text-blue-100">To collaborate online, please find the account details below:</p>
+                <p className="text-blue-100">Account Title: <strong>M Naeem</strong></p>
+           <p className="text-blue-100">Account No: <strong>03063094330</strong></p>
+             <p className="text-blue-100">Bank Name: <strong>Jazz Cash</strong></p>
+            <p className="text-blue-100">Get your receipt via WhatsApp from the number below:</p>
+            <p className="flex items-center justify-center lg:justify-start space-x-2 text-blue-100">
+            <span className="text-cyan-300">03468416683</span>
+            </p>
         </div>
+
       </div>
 
       {/* Bottom Section with Islamic Pattern */}
