@@ -42,7 +42,7 @@ const AboutSection = () => {
 								</li>
 								<li>Developing skilled citizens with strong character</li>
 								<li>
-									Serving the educational needs of Balochistan&apos;s rural and
+									Serving the educational needs of Balochistan of both urban and especially rural and
 									hilly areas
 								</li>
 							</ul>

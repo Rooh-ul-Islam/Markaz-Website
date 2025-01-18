@@ -28,10 +28,10 @@ export default function AcademicPrograms() {
 		{
 			title: "Quranic Studies",
 			icon: <BookOpen className="h-6 w-6" />,
-			details: [
-				"Tahfiz Al-Qur'an program",
+			details: [	
 				"Nazrah with Tajweed",
-				"Option to pursue Dars Nizami",
+				"Tahfiz Al-Qur'an program",
+				"Option to pursue Dars-e-Nizami",
 			],
 		},
 		{
@@ -40,7 +40,7 @@ export default function AcademicPrograms() {
 			details: [
 				"Primary school education",
 				"Access to Model Higher Secondary School",
-				"Education from Class 6 to FAC",
+				"Education from Class 6 to FSC",
 				"Modern curriculum integration",
 			],
 		},
