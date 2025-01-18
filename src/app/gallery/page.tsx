@@ -12,14 +12,6 @@ import {
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { v2 as cloudinary } from 'cloudinary-react';
-
-// Configure Cloudinary
-cloudinary.config({
-  cloud_name: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
-  api_key: process.env.NEXT_PUBLIC_CLOUDINARY_API_KEY,
-  api_secret: process.env.NEXT_PUBLIC_CLOUDINARY_API_SECRET
-});
 
 interface CloudinaryImage {
   public_id: string;
@@ -92,17 +84,7 @@ export default function GalleryPage() {
                           onClick={() => setSelectedImage(image.secure_url)}
                         >
                           <div className="w-full h-72 relative">
-                            <Image
-                              src={cloudinary.url(image.public_id, {
-                                width: 400,
-                                height: 288,
-                                crop: 'fill'
-                              })}
-                              alt={image.public_id}
-                              layout="fill"
-                              objectFit="cover"
-                              className="transition-transform duration-300 hover:scale-110"
-                            />
+                           
                           </div>
                         </Button>
                       </DialogTrigger>
