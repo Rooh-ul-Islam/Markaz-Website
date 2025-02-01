@@ -19,7 +19,7 @@ export default function DonationSection() {
 
   return (
     <div className=" text-cyan-900 py-16 px-6 sm:px-12 lg:px-16">
-        <div className='bg-cyan-700  p-12 rounded-2xl border-cyan-300 border-2 '>
+        <div className='bg-cyan-100  p-12 rounded-2xl border-cyan-300 border-2 '>
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const AboutSection = () => {
 	return (
-		<section className="bg-cyan-700 py-20 text-white">
+		<section id="about-us" className="bg-cyan-700 py-20 text-white">
 			<div className="container mx-auto px-4 text-center md:text-left relative">
 				<div className="flex flex-col md:flex-row items-center md:items-start gap-12 relative z-10">
 					<div className="w-full md:w-1/2 relative group">

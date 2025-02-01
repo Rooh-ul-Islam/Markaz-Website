@@ -26,7 +26,7 @@ export default function ContactUs() {
 	];
 
 	return (
-		<section className="bg-gradient-to-b from-cyan-900 to-cyan-800 text-white py-16 md:py-24">
+		<section  id="contact-us" className="bg-gradient-to-b from-cyan-900 to-cyan-800 text-white py-16 md:py-24">
 			<div className="container mx-auto px-4">
 				<h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
 					Connect with Us

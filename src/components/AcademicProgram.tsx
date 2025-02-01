@@ -97,7 +97,7 @@ export default function AcademicPrograms() {
 	};
 
 	return (
-		<div className="container mx-auto p-4 py-10 sm:py-16 md:py-20">
+		<div id="academic-programs" className="container mx-auto p-4 py-10 sm:py-16 md:py-20">
 			<h1 className="text-3xl font-bold text-center mb-8 text-cyan-700">
 				Academic Programs
 			</h1>

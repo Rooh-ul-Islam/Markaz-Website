@@ -79,7 +79,7 @@ export default function Navbar() {
 								Home
 							</Link>
 							<Link
-								href="#courses"
+								href="#academic-programs"
 								className={cn(
 									"",
 									buttonVariants({
@@ -91,7 +91,7 @@ export default function Navbar() {
 								Courses
 							</Link>
 							<Link
-								href="/about"
+								href="#about-us"
 								className={cn(
 									"",
 									buttonVariants({
@@ -115,7 +115,7 @@ export default function Navbar() {
 								Gallery
 							</Link>
 							<Link
-								href="/contact"
+								href="#contact-us"
 								className={cn(
 									"",
 									buttonVariants({

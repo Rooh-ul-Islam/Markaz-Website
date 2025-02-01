@@ -1,6 +1,8 @@
 import AboutSection from "@/components/AboutInstitution";
 import AcademicPrograms from "@/components/AcademicProgram";
 import ContactUs from "@/components/ContactUs";
+import DonationBanner from "@/components/DonationBanner";
+import GalleryPage from "@/components/galler";
 import StudentLife from "@/components/StudentLife";
 import Testimonies from "@/components/Testimonies";
 import Link from "next/link";
@@ -49,6 +51,8 @@ export default function Component() {
 			<AboutSection />
 			<AcademicPrograms />
 			<StudentLife />
+			<DonationBanner />
+			<GalleryPage />
 			<section className="py-10 sm:py-16 md:py-20 flex flex-col items-center p-4">
 				<blockquote className="mt-6 italic text-lg md:text-xl lg:text-2xl">
 					Join us in our mission to cultivate knowledge, wisdom, and character
