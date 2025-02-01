@@ -76,7 +76,7 @@ export default function GalleryPage() {
                 setExpanded(false)
               }}
               variant={filter === category ? "default" : "outline"}
-              className="text-sm bg-cyan-100 text-cyan-500"
+              className="text-sm bg-cyan-100 text-cyan-500 hover:bg-white"
             >
               {category}
             </Button>

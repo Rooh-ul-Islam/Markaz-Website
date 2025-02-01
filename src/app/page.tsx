@@ -40,7 +40,7 @@ export default function Component() {
 						knowledge and spiritual growth.
 					</p>
 					<Link
-						href="/founder"
+						href="#about-us"
 						className="rounded-md bg-cyan-900  px-8 py-3 font-medium text-white transition-colors hover:bg-cyan-800"
 					>
 						Learn more
