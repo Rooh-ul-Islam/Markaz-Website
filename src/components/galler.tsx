@@ -44,9 +44,9 @@ export default function GalleryPage() {
     { src: "/14.jpeg", alt: "Event 3", category: "Events" },
     { src: "/15.jpeg", alt: "Travel Destination 3", category: "Travel" },
     { src: "/16.jpg", alt: "Gallery Image", category: "Events" },
-		{ src: "/17.jpg", alt: "Gallery Image", category: "Events" },
-    { src: "/18.jpg", alt: "Gallery Image", category: "Events" },
-		{ src: "/19.jpg", alt: "Gallery Image" , category: "Events"}
+ { src: "/17.jpeg", alt: "Gallery Image", category: "Events" },
+    { src: "/18.jpeg", alt: "Gallery Image", category: "Events" },
+		{ src: "/19.jpeg", alt: "Gallery Image" , category: "Events"}
   ]
 
   useEffect(() => {
